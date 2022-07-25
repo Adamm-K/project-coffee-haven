@@ -1,0 +1,21 @@
+/*mixins*/
+@mixin for-phone {
+  @media (max-width: 599px) {
+    font-size: 0.875rem;
+  }
+}
+
+@mixin for-tablet {
+  @media (max-width: 600px) {
+    font-size: 1.25rem;
+  }
+}
+
+@mixin for-mobiles {
+  @media (max-width: 600px) {
+    font-size: 5.25rem;
+    margin: 40px;
+    height: 48px;
+    width: 50px;
+  }
+}

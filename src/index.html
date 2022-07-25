@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta  charset="UTF-8" name="coffe roaster"/>
+    <title>Coffe Roaster</title>
+    <link href="vendor/css/bootstrap-grid.rtl.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Source+Sans+Pro:ital,wght@0,400;0,600;0,900;1,600&display=swap"
+        rel="stylesheet"/>
+    <link rel="stylesheet" href="vendor/css/Glyphter.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body>
+    <section class="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <h2>EL TIGRE</h2>
+                    <p>VENEZUELA COFFEE BEANS</p>
+                </div>
+                <div class="col-6 navbar">
+                    <ul class="nav justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#product">PRODUCT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#form">CONTACT</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row main-title">
+                <h1>HOME OF<br/>ORIGINAL TASTES</h1>
+                <p>DISCOVER</p>
+                <i class="icon-arrow-down" alt="arrow-piture"></i>
+            </div>
+        </div>
+    </section>
+    <section id="home">
+        <div class="products">
+            <div class="container" data-container="coffeContainer">
+            </div>
+        </div>
+        <div class="about">
+            <div class="overlay">
+            </div>
+            <div class="container">
+                <h1>ABOUT US</h1>
+                <p>Who are we? Just a bunch of friends with a love for a good coffee
+                    and desire to create something new, something original.</p>
+                <p>Our coffees reflect us - young, wild and free.
+                    We are on the journey of new tastes...</p>
+                <p>Join us!</p>
+            </div>
+        </div>
+    </section>
+    <section id="product">
+        <div class="products">
+            <div class="container" data-container="coffeContainer">
+            </div>
+        </div>
+    </section>
+    <section id="form">
+        <div class="container">
+            <h1>CONTACT US</h1>
+            <form action="/action_page.php">
+                <label for="name">NAME</label>
+                <input type="text" id="name" name="name" value=""/>
+                <label for="title">TITLE</label>
+                <input type="text" id="title" name="title" value=""/>
+                <label for="message">MESSAGE</label>
+                <textarea row="3" type="text" id="message" name="message" value="">
+                </textarea>
+                <button type="submit" class="btn">SUBMIT</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2022 EL TIGRE inc.</p>
+    </footer>
+    <script id="template-products" type="text/x-handlebars-template">
+        <div class="row">
+            <h1>PRODUCTS</h1>
+        </div>
+        <div class="row">
+            <div class="col-6 product-description">
+                <h2>01. {{firstProduct.caffeeName}}</h2>
+                    <p>{{firstProduct.caffeDescription}}</p>
+                <div>
+                    <div class="row">
+                        <div class="col-6">
+                            <p class="parameters">ROASTING: <span>{{firstProduct.roasting }}</span></p>
+                            <p class="parameters">INTENSITY: <span>{{firstProduct.intensity}}</span></p>
+                        </div>
+                        <div class="col-6">
+                            <img src="images/Badge.webp" class="badge {{#if firstProduct.mostPopular}}visible{{/if}}" alt="badge">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 product"><img src= "{{firstProduct.picture}}" alt="coffee-1"></div>
+        </div>
+        <div class="row between">
+            <div class="col-6 product"><img src= "{{secondProduct.picture}}" alt="coffee-2"></div>
+            <div class="col-6 product-description">
+                <h2>02. {{secondProduct.caffeeName}}</h2>
+                    <p>{{secondProduct.caffeDescription}}</p>
+                <div>
+                    <div class="row">
+                        <div class="col-6">
+                            <p class="parameters">ROASTING: <span>{{secondProduct.roasting}}</span></p>
+                            <p class="parameters">INTENSITY: <span>{{secondProduct.intensity}}</span></p>
+                        </div>
+                        <div class="col-6">
+                            <img src="images/Badge.webp" class="badge {{#if secondProduct.mostPopular}}visible{{/if}}" alt="badge">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 product-description">
+                <h2>03. {{thirdProduct.caffeeName}}</h2>
+                    <p>{{thirdProduct.caffeDescription}}</p>
+                <div>
+                    <div class="row">
+                        <div class="col-6">
+                            <p class="parameters">ROASTING: <span>{{thirdProduct.roasting}}</span></p>
+                            <p class="parameters">INTENSITY: <span>{{thirdProduct.intensity}}</span></p>
+                        </div>
+                        <div class="col-6">
+                            <img src="images/Badge.webp" class="badge {{#if thirdProduct.mostPopular}}visible{{/if}}" alt="badge">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 product"><img src="{{thirdProduct.picture}}" alt="coffee-3"></div>
+        </div>        
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="js/data.js" type="module"></script>
+    <script src="js/app.js" type="module"></script>
+</body>
+
+</html>

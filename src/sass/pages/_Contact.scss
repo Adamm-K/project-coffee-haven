@@ -1,0 +1,46 @@
+
+#form {
+  padding: 30px;
+  text-align: center;
+  font-family: $font-header;
+  font-size: 35px;
+  font-weight: $font-semiBold;
+  margin: 0 auto;
+  
+  label {
+    display: block;
+  }
+
+  @media (max-width: 599px) {
+    font-size: 0.875rem;
+    overflow: hidden;
+  };
+}
+
+input,
+textarea {
+  margin: 40px 0;
+  padding: 10px 0;
+  max-width: 850px;
+  max-width: 100%;
+  border: solid;
+}
+
+button {
+  display: block;
+  font-size: 29px;
+  font-stretch: expanded;
+  font-weight: bold;
+  background-color: $section-title-color;
+  color: #ffffff;
+  max-width: 300px;
+  height: 80px;
+  border: none;
+  letter-spacing: 4px;
+  margin: 0 auto;
+
+  @media (max-width: 599px) {
+    font-size: 0.875rem;
+    overflow: hidden;
+  };
+}
